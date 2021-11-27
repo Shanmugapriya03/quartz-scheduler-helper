@@ -9,6 +9,13 @@ import java.util.Date;
  * @author shanmugapriyar
  */
 public class TriggerHelper {
+    /**
+     *
+     * @param jobClass Job Class
+     * @param timerInfo timer details to build Job
+     * @param triggerType Type of Trigger - SimpleTrigger/ CronTrigger
+     * @return returns Simple Trigger
+     */
     public Trigger buildSimpleTrigger(final Class jobClass, final TimerInfo timerInfo, final String triggerType){
         SimpleScheduleBuilder builder = SimpleScheduleBuilder.simpleSchedule().withIntervalInMilliseconds(timerInfo.getRepeatIntervalMs());
         if (timerInfo.isRunForever()){
@@ -24,6 +31,13 @@ public class TriggerHelper {
                 .build();
     }
 
+    /**
+     *
+     * @param jobClass Job Class
+     * @param cronExpression cron expression
+     * @param triggerType Type of Trigger - SimpleTrigger/ CronTrigger
+     * @return returns Cron Trigger
+     */
     public Trigger buildCronTrigger(final Class jobClass, final String cronExpression, final String triggerType){
         CronScheduleBuilder builder = CronScheduleBuilder.cronSchedule(cronExpression);
         return TriggerBuilder
