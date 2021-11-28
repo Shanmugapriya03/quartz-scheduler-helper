@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class JobHelper {
     /**
+     * Builds a Job with Identity name as Job Class name and Identity group as groupName_triggerType
      *
      * @param jobClass Job Class
      * @param groupName Name of group - to group jobs
@@ -26,6 +27,7 @@ public class JobHelper {
     }
 
     /**
+     * Builds a durable Job with Identity name as Job Class name and Identity group as groupName_triggerType
      *
      * @param jobClass Job Class
      * @param groupName Name of group - to group jobs
@@ -41,8 +43,9 @@ public class JobHelper {
     }
 
     /**
+     * Fetches the Job details of currently executing jobs
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @return List of JobDetail which are currently in execution
      */
     public List<JobDetail> getCurrentlyExecutingJobDetails(Scheduler scheduler){
@@ -59,8 +62,9 @@ public class JobHelper {
     }
 
     /**
+     * Fetches the Job names of currently executing jobs
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @return List of Job Names which are currently in execution
      */
     public List<String> getCurrentlyExecutingJobNames(Scheduler scheduler){
@@ -73,8 +77,9 @@ public class JobHelper {
     }
 
     /**
+     * Pauses all the Jobs
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      */
     public void pauseAllJobs(Scheduler scheduler){
         try {
@@ -85,8 +90,9 @@ public class JobHelper {
     }
 
     /**
+     * Resumes all the Jobs
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      */
     public void resumeAllJobs(Scheduler scheduler){
         try {
@@ -97,8 +103,9 @@ public class JobHelper {
     }
 
     /**
+     * Updates the state of the Job
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @param jobClass Job Class
      * @param groupName Name of group - to group jobs
      * @param jobState State of Job
@@ -128,8 +135,9 @@ public class JobHelper {
     }
 
     /**
+     * Updates the state of the Job to Pause
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @param jobClass Job Class
      * @param groupName Name of group - to group jobs
      */
@@ -138,8 +146,9 @@ public class JobHelper {
     }
 
     /**
+     * Updates the state of the Job to Resume
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @param jobClass Job Class
      * @param groupName Name of group - to group jobs
      */
@@ -148,8 +157,9 @@ public class JobHelper {
     }
 
     /**
+     * Updates the state of the Job to Interrupt
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @param jobClass Job Class
      * @param groupName Name of group - to group jobs
      */
@@ -158,8 +168,9 @@ public class JobHelper {
     }
 
     /**
+     * Updates the state of the Job to Trigger
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @param jobClass Job Class
      * @param groupName Name of group - to group jobs
      */
@@ -168,8 +179,9 @@ public class JobHelper {
     }
 
     /**
+     * Updates the state of the Group
      *
-     * @param scheduler
+     * @param scheduler instance of scheduler
      * @param groupName Name of group - to group jobs
      * @param groupState State of Group
      */
@@ -190,8 +202,8 @@ public class JobHelper {
     }
 
     /**
-     *
-     * @param scheduler
+     * Updates the state of the Group to Pause
+     * @param scheduler instance of scheduler
      * @param groupName Name of group - to group jobs
      */
     public void updateGroupStateToPause(Scheduler scheduler, final String groupName){
@@ -199,8 +211,8 @@ public class JobHelper {
     }
 
     /**
-     *
-     * @param scheduler
+     * Updates the state of the Group to Resume
+     * @param scheduler instance of scheduler
      * @param groupName Name of group - to group jobs
      */
     public void updateGroupStateToResume(Scheduler scheduler, final String groupName){

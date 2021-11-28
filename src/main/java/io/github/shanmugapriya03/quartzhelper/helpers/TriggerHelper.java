@@ -10,9 +10,10 @@ import java.util.Date;
  */
 public class TriggerHelper {
     /**
+     * Builds a Simple Trigger with Identity name as Job Class name and Identity group as triggerType
      *
      * @param jobClass Job Class
-     * @param timerInfo timer details to build Job
+     * @param timerInfo timer details to build Job - refer io/github/shanmugapriya03/quartzhelper/model/TimerInfo.java
      * @param triggerType Type of Trigger - SimpleTrigger/ CronTrigger
      * @return returns Simple Trigger
      */
@@ -32,6 +33,7 @@ public class TriggerHelper {
     }
 
     /**
+     * Builds a Cron Trigger with Identity name as Job Class name and Identity group as triggerType
      *
      * @param jobClass Job Class
      * @param cronExpression cron expression
