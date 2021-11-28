@@ -6,7 +6,7 @@
 
   <groupId>io.github.shanmugapriya03</groupId>
   <artifactId>quartz-scheduler-helper</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 
   <name>quartz-scheduler-helper</name>
   <description>Quartz Scheduler Helper Project contains classes full of helpful methods required to implement Quartz Schedulers</description>
