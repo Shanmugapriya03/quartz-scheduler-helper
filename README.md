@@ -1,4 +1,3 @@
-![release](https://github.com/Shanmugapriya03/quartz-scheduler-helper/actions/workflows/release.yml/badge.svg)
 # Quartz Scheduler Helper
 
 This Java library contains helpful methods inorder to implement [Quartz Schedulers](http://www.quartz-scheduler.org/)
